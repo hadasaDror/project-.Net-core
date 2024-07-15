@@ -11,3 +11,5 @@ C:\Users\user1\Desktop\project net\BL\obj\Debug\net8.0\BL.dll
 C:\Users\user1\Desktop\project net\BL\obj\Debug\net8.0\refint\BL.dll
 C:\Users\user1\Desktop\project net\BL\obj\Debug\net8.0\BL.pdb
 C:\Users\user1\Desktop\project net\BL\obj\Debug\net8.0\ref\BL.dll
+C:\Users\user1\Desktop\project net\BL\bin\Debug\net8.0\BL.runtimeconfig.json
+C:\Users\user1\Desktop\project net\BL\obj\Debug\net8.0\BL.genruntimeconfig.cache

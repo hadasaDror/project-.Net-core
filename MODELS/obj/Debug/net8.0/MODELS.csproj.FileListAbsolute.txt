@@ -11,3 +11,5 @@ C:\Users\user1\Desktop\project net\MODELS\obj\Debug\net8.0\MODELS.dll
 C:\Users\user1\Desktop\project net\MODELS\obj\Debug\net8.0\refint\MODELS.dll
 C:\Users\user1\Desktop\project net\MODELS\obj\Debug\net8.0\MODELS.pdb
 C:\Users\user1\Desktop\project net\MODELS\obj\Debug\net8.0\ref\MODELS.dll
+C:\Users\user1\Desktop\project net\MODELS\bin\Debug\net8.0\MODELS.runtimeconfig.json
+C:\Users\user1\Desktop\project net\MODELS\obj\Debug\net8.0\MODELS.genruntimeconfig.cache

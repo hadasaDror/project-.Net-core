@@ -26,7 +26,6 @@ namespace MODELS.Models
             {
                 entity.HasKey(e => e.Id);
                 entity.Property(e => e.Name).IsRequired();
-                entity.Property(e => e.Time).IsRequired();
                 // ניתן להוסיף הגדרות נוספות כפי הצורך
             });
 

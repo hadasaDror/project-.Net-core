@@ -7,10 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using AutoMapper;
+using Microsoft.EntityFrameworkCore;
 
 namespace DAL.Data
 {
-    public class BookletData:IBooklet
+    public class BookletData : IBooklet
     {
         private readonly BookletContext _context;
         private readonly IMapper _mapper;
@@ -28,15 +29,44 @@ namespace DAL.Data
             return isOk;
 
         }
-        public async Task<List<BookletDTO>> GetAllBooklet()
+        public List<BookletDTO> GetAllBooklets()
         {
-            return null;
+            var mybooklets = _context.Booklets.ToList();
+            var mybookletsDto = _mapper.Map<List<BookletDTO>>(mybooklets);
+            return mybookletsDto;
         }
+
         public async Task<BookletDTO> GetBookletByName(string name)
         {
-            return null;
+            var myBooklet = _context.Booklets.FirstOrDefault(book => book.Name == name);
+            var mybookletDto = _mapper.Map<BookletDTO>(myBooklet);
+            return mybookletDto;
+        }
+        public void UpdatePrice(double price, int id)
+        {
+            var Booklet = _context.Booklets.Find(id);
+
+            if (Booklet == null)
+            {
+                throw new NotImplementedException();
+            }
+
+            Booklet.Price = price;
+
+            _context.Update(Booklet);
+            _context.SaveChangesAsync();
+        }
+        public void DeleteBooklet(int id)
+        {
+            var booklet = _context.Booklets.Where(b => b.Id == id).FirstOrDefault();
+
+            if (booklet != null)
+            {
+                _context.Booklets.Remove(booklet);
+                _context.SaveChanges();
+            }
         }
     }
 
- 
+
 }

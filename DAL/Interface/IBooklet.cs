@@ -1,4 +1,5 @@
 ﻿using DAL.Dtos;
+using MODELS.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,8 +11,10 @@ namespace DAL.Interface
     public interface IBooklet
     {
         Task<bool> CreateBooklet(BookletDTO booklet);
-        Task<List<BookletDTO>> GetAllBooklet();
+        List<BookletDTO> GetAllBooklets();
         Task<BookletDTO> GetBookletByName(string name);
+        void UpdatePrice(double price, int id);
+        public void DeleteBooklet(int id);
 
     }
 }
